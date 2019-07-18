@@ -18,7 +18,7 @@ Several variants of the double pendulum may be considered; the two limbs may be 
 
 The app will consist of a single screen where the motion of the double pendulum is displayed, and a setting section to the side.
 
-![GIF](hhttps://raw.githubusercontent.com/BenjaminT88/double_pendulum/master/assets/images/ezgif.com-video-to-gif.gif)
+![GIF](https://github.com/BenjaminT88/double_pendulum/blob/master/assets/images/ezgif.com-video-to-gif.gif?raw=true)
 
 ### Technologies
 
