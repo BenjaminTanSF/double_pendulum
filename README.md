@@ -1,5 +1,7 @@
 # Double Pendulum Simulator
 
+[Live Link](https://benjamint88.github.io/double_pendulum/)
+
 ## Overview
 
 In physics and mathematics, in the area of dynamical systems, a `double pendulum` is a pendulum with another pendulum attached to its end, and is a simple physical system that exhibits rich dynamic behavior with a strong sensitivity to initial conditions. The motion of a `double pendulum` is governed by a set of coupled ordinary differential equations and is chaotic.
@@ -26,13 +28,3 @@ This project will be implemented with the following technologies:
 
 * `HTML5 Canvas` for DOM rendering
 * `p5.js` for drawing functionality
-
-### Timeline
-
-Day 1: Study up on the physics behind the chaotic movements of double compound pendulum. Play around with p5.js and get a good hang of it.
-
-Day 2: Create the basic simulation of single pendulum
-
-Day 3: Create the basic simulation of double pendulum
-
-Day 4: Expand the simulation to display double compound pendulum and settings
