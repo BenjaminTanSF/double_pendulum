@@ -4,7 +4,7 @@ let textColor = "#469aaa";
 // Initial pendulum properties
 let limb1 = 150;
 let limb2 = 150;
-let mass1 = 20;
+let mass1 = 80;
 let mass2 = 20;
 let angle1 = 0;
 let angle2 = 0;
@@ -12,7 +12,7 @@ let angle1Vel = 0;
 let angle2Vel = 0;
 let g = 1.0;
 let ballDiameter = 10;
-let dampening = 0.999;
+let dampening = 0.9999;
 
 // position points
 let x1;
@@ -51,7 +51,7 @@ function setup() {
 
   // create sliders
   limb1Slider = createSlider(10, (width / 3), limb1);
-  limb1Slider.position(15, 15);
+  limb1Slider.position(50, 50);
 
   limb2Slider = createSlider(10, (width / 3), limb2);
   limb2Slider.position(limb1Slider.x, (limb1Slider.y + limb1Slider.height + 10));
@@ -65,7 +65,7 @@ function setup() {
   gravitySlider = createSlider(0, 20, g, 0.1);
   gravitySlider.position(mass2Slider.x, (mass2Slider.y + mass2Slider.height + 10));
 
-  dampeningSlider = createSlider(975, 999, (dampening * 1000));
+  dampeningSlider = createSlider(9750, 9999, (dampening * 10000));
   dampeningSlider.position(gravitySlider.x, (gravitySlider.y + gravitySlider.height + 10));
 
   // create buffer
@@ -86,7 +86,7 @@ function draw() {
   mass1 = mass1Slider.value();
   mass2 = mass2Slider.value();
   g = gravitySlider.value();
-  dampening = (dampeningSlider.value() / 1000);
+  dampening = (dampeningSlider.value() / 10000);
 
   // add text besides sliders
   let fontSize = 12;
@@ -98,7 +98,7 @@ function draw() {
   text("Mass 1: " + mass1, (mass1Slider.x + mass1Slider.width + 15), (mass1Slider.y + (mass1Slider.height / 2) + (fontSize / 2)));
   text("Mass 2: " + mass2, (mass2Slider.x + mass2Slider.width + 15), (mass2Slider.y + (mass2Slider.height / 2) + (fontSize / 2)));
   text("Gravity: " + g, (gravitySlider.x + gravitySlider.width + 15), (gravitySlider.y + (gravitySlider.height / 2) + (fontSize / 2)));
-  text("Dampening: " + dampening, (dampeningSlider.x + dampeningSlider.width + 15), (dampeningSlider.y + (dampeningSlider.height / 2) + (fontSize / 2)));
+  text("Dampening: " + `${dampening * 100} %`, (dampeningSlider.x + dampeningSlider.width + 15), (dampeningSlider.y + (dampeningSlider.height / 2) + (fontSize / 2)));
 
   // calculate angles
   let angle1Acc = (-g * (2 * mass1 + mass2) * sin(angle1) + -mass2 * g * sin(angle1 - 2 * angle2) + -2 * sin(angle1 - angle2) * mass2 * angle2Vel * angle2Vel * limb2 + angle1Vel * angle1Vel * limb1 * cos(angle1 - angle2)) / (limb1 * (2 * mass1 + mass2 - mass2 * cos(2 * angle1 - 2 * angle2)));
