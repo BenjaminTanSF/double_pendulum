@@ -1,5 +1,7 @@
 # Double Pendulum Simulator
 
+![GIF](https://github.com/BenjaminT88/double_pendulum/blob/master/assets/images/ezgif.com-video-to-gif.gif?raw=true)
+
 [Live Link](https://benjamint88.github.io/double_pendulum/)
 
 ## Overview
@@ -10,17 +12,12 @@ Several variants of the double pendulum may be considered; the two limbs may be 
 
 [Wikipdeia Page](https://en.wikipedia.org/wiki/Double_pendulum)
 
-## Functionality and MVP
+## Functionality
 
 * Users are able to define the mass of each pendulum.
 * Users can define the length of each limb.
 * Users can also see the motion of the double compound pendulum.
 
-### Wireframes
-
-The app will consist of a single screen where the motion of the double pendulum is displayed, and a setting section to the side.
-
-![GIF](https://github.com/BenjaminT88/double_pendulum/blob/master/assets/images/ezgif.com-video-to-gif.gif?raw=true)
 
 ### Technologies
 
@@ -28,3 +25,13 @@ This project will be implemented with the following technologies:
 
 * `HTML5 Canvas` for DOM rendering
 * `p5.js` for drawing functionality
+
+### Formula Implementation
+
+![formula](https://github.com/BenjaminT88/double_pendulum/blob/master/assets/images/formula.png?raw=true)
+
+```javascript
+angle1Acc = (-g * (2 * mass1 + mass2) * sin(angle1) + -mass2 * g * sin(angle1 - 2 * angle2) + -2 * sin(angle1 - angle2) * mass2 * angle2Vel * angle2Vel * limb2 + angle1Vel * angle1Vel * limb1 * cos(angle1 - angle2)) / (limb1 * (2 * mass1 + mass2 - mass2 * cos(2 * angle1 - 2 * angle2)));
+
+angle2Acc = (2 * sin(angle1 - angle2) * (angle1Vel * angle1Vel * limb1 * (mass1 + mass2) + g * (mass1 + mass2) * cos(angle1) + angle2Vel * angle2Vel * limb2 * mass2 * cos(angle1 - angle2))) / (limb2 * (2 * mass1 + mass2 - mass2 * cos(2 * angle1 - 2 * angle2)));
+```
