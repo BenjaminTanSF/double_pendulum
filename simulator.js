@@ -7,6 +7,8 @@ let limb2 = 150;
 let mass1 = 80;
 let mass2 = 20;
 let angle1 = 0;
+// test
+let angle1Rotation = 0;
 let angle2 = 0;
 let angle1Vel = 0;
 let angle2Vel = 0;
@@ -80,6 +82,8 @@ function setup() {
 }
 
 function draw() {
+  console.log(angle1);
+  console.log(angle2);
   // setup coloring
   background(color(0, 40, 90));
   imageMode(CORNER);
@@ -140,6 +144,10 @@ function draw() {
 
   prevx2 = x2;
   prevy2 = y2;
+
+  // Testing gravity circulation
+  // angle1 += 0.001;
+  angle1Rotation += 0.001;
 }
 
 function calculateAngles() {
@@ -159,12 +167,12 @@ function calculateAngles() {
 
 function calculateBallLocations() {
   // ball 1
-  x1 = limb1 * sin(angle1);
-  y1 = limb1 * cos(angle1);
+  x1 = limb1 * sin(angle1 + angle1Rotation);
+  y1 = limb1 * cos(angle1 + angle1Rotation);
 
   // ball 2
-  x2 = x1 + limb2 * sin(angle2);
-  y2 = y1 + limb2 * cos(angle2);
+  x2 = x1 + limb2 * sin(angle2 + angle1Rotation);
+  y2 = y1 + limb2 * cos(angle2 + angle1Rotation);
 }
 
 function calculateForces() {
