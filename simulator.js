@@ -82,8 +82,6 @@ function setup() {
 }
 
 function draw() {
-  console.log(angle1);
-  console.log(angle2);
   // setup coloring
   background(color(0, 40, 90));
   imageMode(CORNER);
@@ -98,7 +96,7 @@ function draw() {
   dampening = (dampeningSlider.value() / 10000);
 
   // add text besides sliders
-  let fontSize = 12;
+  let fontSize = 18;
   strokeWeight(0);
   fill(color(70, 154, 170, 0.9));
   textSize(fontSize);
