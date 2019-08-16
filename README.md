@@ -1,6 +1,6 @@
 # Double Pendulum Simulator
 
-![GIF](https://github.com/BenjaminT88/double_pendulum/blob/master/assets/images/ezgif.com-video-to-gif.gif?raw=true)
+![GIF](https://github.com/BenjaminTanSF/double_pendulum/blob/master/assets/images/ezgif.com-video-to-gif.gif?raw=true)
 
 [Live Link](https://benjamintan.dev/double_pendulum/)
 
@@ -30,7 +30,7 @@ This project will be implemented with the following technologies:
 
 Although implementing the original formula is fairly straight forward, it is not as easy to track the locations of balls at all times.
 
-![formula](https://github.com/BenjaminT88/double_pendulum/blob/master/assets/images/formula.png?raw=true)
+![formula](https://github.com/BenjaminTanSF/double_pendulum/blob/master/assets/images/formula.png?raw=true)
 
 ```javascript
 angle1Acc = (-g * (2 * mass1 + mass2) * sin(angle1) + -mass2 * g * sin(angle1 - 2 * angle2) + -2 * sin(angle1 - angle2) * mass2 * angle2Vel * angle2Vel * limb2 + angle1Vel * angle1Vel * limb1 * cos(angle1 - angle2)) / (limb1 * (2 * mass1 + mass2 - mass2 * cos(2 * angle1 - 2 * angle2)));
