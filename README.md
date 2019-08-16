@@ -2,7 +2,7 @@
 
 ![GIF](https://github.com/BenjaminT88/double_pendulum/blob/master/assets/images/ezgif.com-video-to-gif.gif?raw=true)
 
-[Live Link](https://benjamintan.dev/double_pendulum//)
+[Live Link](https://benjamintan.dev/double_pendulum/)
 
 ## Overview
 
