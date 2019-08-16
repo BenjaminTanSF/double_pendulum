@@ -167,12 +167,12 @@ function calculateAngles() {
 
 function calculateBallLocations() {
   // ball 1
-  x1 = limb1 * sin(angle1 + angle1Rotation);
-  y1 = limb1 * cos(angle1 + angle1Rotation);
+  x1 = limb1 * sin(angle1);
+  y1 = limb1 * cos(angle1);
 
   // ball 2
-  x2 = x1 + limb2 * sin(angle2 + angle1Rotation);
-  y2 = y1 + limb2 * cos(angle2 + angle1Rotation);
+  x2 = x1 + limb2 * sin(angle2);
+  y2 = y1 + limb2 * cos(angle2);
 }
 
 function calculateForces() {
